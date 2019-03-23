@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-final fc = NumberFormat.simpleCurrency();
+final formatCurrency = NumberFormat.simpleCurrency();
 
 List<CityCard> cityCards = [
-  CityCard("images/calgary.jpg", "Calgary", "March 2019", "45", "4299", "2254440"),
+  CityCard("images/calgary.jpg", "Calgary", "March 2019", "45", "4299", "2250"),
 ];
 
 class CityCard extends StatelessWidget {
@@ -30,7 +30,7 @@ class CityCard extends StatelessWidget {
                 Container(
                   height: 210.0,
                   width: 160.0,
-                  child: Image.asset(imagePath),
+                  child: Image.asset(imagePath, fit: BoxFit.cover),
                 ),
                 Positioned(
                   left: 0.0,
@@ -96,37 +96,34 @@ class CityCard extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                ],
-              ),
-              Text(
-                '{${fc.format(newPrice)}',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14.0),
-              ),
-              SizedBox(
-                width: 20.0,
-              ),
-              Text(
-                '(${fc.format(oldPrice)}',
-                style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12.0),
-              )
-            ],
-          ),
+          Expanded(
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  width: 5.0,
+                ),
+                Text(
+                  '${formatCurrency.format(newPrice)}',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14.0),
+                ),
+                SizedBox(
+                  width: 5.0,
+                ),
+                Text(
+                  "(${formatCurrency.format(oldPrice)})",
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 12.0),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
