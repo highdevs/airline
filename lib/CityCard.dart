@@ -3,18 +3,18 @@ import 'package:intl/intl.dart';
 
 final formatCurrency = NumberFormat.simpleCurrency();
 
-List<CityCard> cityCards = [
-  CityCard("images/calgary.jpg", "Calgary", "March 2019", "45", "4299", "2250"),
-];
+
 
 class CityCard extends StatelessWidget {
-  final String imagePath, cityName, monthYear, discount, oldPrice, newPrice;
+  final String imagePath, cityName, monthYear, discount;
+  final int oldPrice, newPrice;
 
   CityCard(this.imagePath, this.cityName, this.monthYear, this.discount,
       this.oldPrice, this.newPrice);
 
   @override
   Widget build(BuildContext context) {
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Column(

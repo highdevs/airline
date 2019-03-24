@@ -1,5 +1,6 @@
 import 'package:airline/CityCard.dart';
 import 'package:airline/HomeScreenTop.dart';
+import 'package:airline/HomeScreenBottom.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -17,7 +18,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           HomeScreenTop(),
-          homeScreenBottomPart,
+          HomeScreenBottom(),
         ],
       ),
     );
@@ -29,38 +30,6 @@ class HomeScreen extends StatelessWidget {
 
 
 
-var viewAllStyle = TextStyle(fontSize: 14.0, color: appTheme.primaryColor);
 
-var homeScreenBottomPart = Column(
-  children: <Widget>[
-    Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          SizedBox(
-            width: 16.0,
-          ),
-          Text(
-            'Currently Matched Items',
-            style: dropDownMenuItemStyle,
-          ),
-          Spacer(),
-          Text(
-            'View All',
-            style: viewAllStyle,
-          ),
-        ],
-      ),
-    ),
-    Container(
-      height: 210.0,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: cityCards,
-      ),
-    ),
-  ],
-);
+
 
