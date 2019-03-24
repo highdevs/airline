@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             HomeScreenTop(),
             HomeScreenBottom(),
+            HomeScreenBottom(),
           ],
         ),
       ),
