@@ -43,5 +43,8 @@ class HomeScreenBottom extends StatelessWidget {
   }
 }
 List<CityCard> cityCards = [
-  CityCard("images/calgary.jpg", "Calgary", "March 2019", "45", 4299, 2250),
+  CityCard("images/calgary.jpg", "Calgary", "May 2019", "45", 4299, 2210),
+  CityCard("images/london.jpg", "London", "March 2019", "15", 2249, 4240),
+  CityCard("images/paris.jpeg", "Paris", "April 2019", "25", 1249, 3456),
+
 ];

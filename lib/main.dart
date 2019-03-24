@@ -1,4 +1,5 @@
 import 'package:airline/CityCard.dart';
+import 'package:airline/CustomBottomBar.dart';
 import 'package:airline/HomeScreenTop.dart';
 import 'package:airline/HomeScreenBottom.dart';
 import 'package:flutter/material.dart';
@@ -15,11 +16,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          HomeScreenTop(),
-          HomeScreenBottom(),
-        ],
+      bottomNavigationBar: CustomAppBar(),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: <Widget>[
+            HomeScreenTop(),
+            HomeScreenBottom(),
+          ],
+        ),
       ),
     );
   }
