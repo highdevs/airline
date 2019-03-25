@@ -1,3 +1,4 @@
+import 'package:airline/flight_list.dart';
 import 'package:flutter/material.dart';
 import 'package:airline/CustomShapeClipper.dart';
 import 'package:airline/ChoiceChip.dart';
@@ -125,9 +126,14 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                           borderRadius: BorderRadius.all(
                             Radius.circular(30.0),
                           ),
-                          child: Icon(
-                            Icons.search,
-                            color: Colors.black,
+                          child: InkWell(
+                            onTap: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => FlightListingScreen()));
+    },
+                            child: Icon(
+                              Icons.search,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                         border: InputBorder.none,

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
   final List<BottomNavigationBarItem> bottomBarItems = [];
-  final bottomNavBarItemsStyle =  TextStyle(fontStyle: FontStyle.normal, color: Colors.black);
+  final bottomNavBarItemsStyle =
+      TextStyle(fontStyle: FontStyle.normal, color: Colors.black);
   CustomAppBar() {
     bottomBarItems.add(
       BottomNavigationBarItem(
@@ -12,7 +13,6 @@ class CustomAppBar extends StatelessWidget {
           color: appTheme.primaryColor,
         ),
         icon: Icon(
-
           Icons.home,
           color: Colors.black,
         ),
