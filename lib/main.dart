@@ -1,7 +1,6 @@
-import 'package:airline/CityCard.dart';
-import 'package:airline/CustomBottomBar.dart';
-import 'package:airline/HomeScreenTop.dart';
-import 'package:airline/HomeScreenBottom.dart';
+import 'package:airline/custom_bottom.dart';
+import 'package:airline/home_screen_bottom.dart';
+import 'package:airline/home_screen_top.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -10,7 +9,6 @@ void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: appTheme,
     ));
-
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -23,19 +21,9 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             HomeScreenTop(),
             HomeScreenBottom(),
-            HomeScreenBottom(),
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-

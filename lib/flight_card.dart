@@ -1,4 +1,4 @@
-import 'package:airline/CityCard.dart';
+ import 'package:airline/city_card.dart';
 import 'package:airline/flight_list.dart';
 import 'package:flutter/material.dart';
 

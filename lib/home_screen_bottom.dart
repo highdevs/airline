@@ -1,7 +1,7 @@
-import 'package:airline/CityCard.dart';
+ import 'package:airline/city_card.dart';
+import 'package:airline/home_screen_top.dart';
 import 'package:flutter/material.dart';
-import 'package:airline/HomeScreenTop.dart';
-
+ 
 var viewAllStyle = TextStyle(fontSize: 14.0, color: appTheme.primaryColor);
 
 class HomeScreenBottom extends StatelessWidget {

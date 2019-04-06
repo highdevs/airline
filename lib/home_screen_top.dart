@@ -1,20 +1,19 @@
+import 'package:airline/choice_chip.dart';
+import 'package:airline/custom_shape.dart';
 import 'package:airline/flight_list.dart';
 import 'package:flutter/material.dart';
-import 'package:airline/CustomShapeClipper.dart';
-import 'package:airline/ChoiceChip.dart';
-
 
 Color firstColor = Color(0xFFF47D15);
 Color secondColor = Color(0xFEF4772C);
 
 const TextStyle dropDownLabelStyle =
-TextStyle(color: Colors.white, fontSize: 16.0);
+    TextStyle(color: Colors.white, fontSize: 16.0);
 const TextStyle dropDownMenuItemStyle =
-TextStyle(color: Colors.black, fontSize: 16.0);
+    TextStyle(color: Colors.black, fontSize: 16.0);
 List<String> locations = ['Boston (BOS)', 'New York (JFK)'];
 
 ThemeData appTheme =
-ThemeData(primaryColor: Color(0xFFF47D15), fontFamily: 'Oxygen,');
+    ThemeData(primaryColor: Color(0xFFF47D15), fontFamily: 'Oxygen,');
 
 class HomeScreenTop extends StatefulWidget {
   final Widget child;
@@ -23,6 +22,7 @@ class HomeScreenTop extends StatefulWidget {
 
   _HomeScreenTopState createState() => _HomeScreenTopState();
 }
+
 class _HomeScreenTopState extends State<HomeScreenTop> {
   var selectedLocationIndex = 0;
   bool isFlightSelected = true;
@@ -74,18 +74,18 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                           ],
                         ),
                         itemBuilder: (BuildContext context) =>
-                        <PopupMenuItem<int>>[
-                          PopupMenuItem(
-                            child: Text(locations[0],
-                                style: dropDownMenuItemStyle),
-                            value: 0,
-                          ),
-                          PopupMenuItem(
-                            child: Text(locations[1],
-                                style: dropDownMenuItemStyle),
-                            value: 1,
-                          ),
-                        ],
+                            <PopupMenuItem<int>>[
+                              PopupMenuItem(
+                                child: Text(locations[0],
+                                    style: dropDownMenuItemStyle),
+                                value: 0,
+                              ),
+                              PopupMenuItem(
+                                child: Text(locations[1],
+                                    style: dropDownMenuItemStyle),
+                                value: 1,
+                              ),
+                            ],
                       ),
                       Spacer(),
                       Icon(
@@ -128,8 +128,12 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                           ),
                           child: InkWell(
                             onTap: () {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => FlightListingScreen()));
-    },
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          FlightListingScreen()));
+                            },
                             child: Icon(
                               Icons.search,
                               color: Colors.black,
@@ -149,7 +153,8 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     InkWell(
-                      child: ChoiceChipCustom(Icons.flight_takeoff, 'Flights', isFlightSelected),
+                      child: ChoiceChipCustom(
+                          Icons.flight_takeoff, 'Flights', isFlightSelected),
                       onTap: () {
                         setState(() {
                           isFlightSelected = true;

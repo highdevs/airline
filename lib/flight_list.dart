@@ -1,5 +1,5 @@
-import 'package:airline/FlightListingBottom.dart';
-import 'package:airline/FlightListingTop.dart';
+import 'package:airline/flight_listing_bottom.dart';
+import 'package:airline/flight_listing_top.dart';
 import 'package:flutter/material.dart';
 
 final Color discountBackgroundColor = Color(0xFFFFE08D);
